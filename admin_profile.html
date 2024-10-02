@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Admin Profile</h2>
+      <div class="profile-info">
+        <label for="fullName">Full Name:</label>
+        <span id="fullName">Admin Name</span>
+      </div>
+      <div class="profile-info">
+        <label for="email">Email:</label>
+        <span id="email">admin@example.com</span>
+      </div>
+      <!-- Add more profile information as needed -->
+      <div class="logout-button">
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
+
+    <script>
+      // You can retrieve admin data from localStorage or a database if needed
+      var adminData = {
+        fullName: "Admin Name",
+        email: "admin@example.com",
+        // Add more admin information as needed
+      };
+
+      // Display admin data on the profile page
+      document.getElementById("fullName").innerText = adminData.fullName;
+      document.getElementById("email").innerText = adminData.email;
+      // Display more profile information as needed
+    </script>
+  </body>
+</html>

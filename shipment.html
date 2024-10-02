@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipment page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      
+      <h1>Shipment Order Page</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="myshipment.php">MyShipment</a>
+      <a href="myorders.php">MyOrders</a>
+      <a href="liveorder.php">Live Orders</a>
+      <a href="carriers.php">Available shipments</a>
+      <a href="profile.php">Profile</a>
+    </nav>
+    <div class="container">
+      <form action="process_shipment.php" method="post">
+        <label for="orderType">order Type:</label>
+        <select id="orderType" name="orderType" required>
+          <option value="">Select order Type</option>
+          <option value="Cars">Cars</option>
+          <option value="motor Cycle">motor Cycle</option>
+          <option value="House hold items">House hold items</option>
+          <option value="Moves">Moves</option>
+          <option value="fright">fright</option>
+        </select>
+
+        <label for="totalweight">Total Weight</label>
+        <textarea
+          id="totalweight"
+          name="totalweight"
+          rows="1"
+          required
+        ></textarea>
+
+        <label for="infotoTransporter">Any information to Transporter:</label>
+        <textarea
+          id="infotoTransporter"
+          name="infotoTransporter"
+          rows="5"
+          required
+        ></textarea>
+
+        <label for="pickupAddress">Pickup Address:</label>
+        <textarea
+          id="pickupAddress"
+          name="pickupAddress"
+          rows="2"
+          required
+        ></textarea>
+
+        <label for="dropAddress">Drop Address:</label>
+        <textarea
+          id="dropAddress"
+          name="dropAddress"
+          rows="2"
+          required
+        ></textarea>
+
+        <label for="distance">distance:</label>
+        <textarea
+          id="distance"
+          name="distance"
+          rows="2"
+          required
+        ></textarea>
+
+        <label for="ReceivermobileNumber"> Receiver Mobile Number:</label>
+            <input type="tel" id="ReceivermobileNumber" name="ReceivermobileNumber" pattern="[0-9]{10}" required />
+
+        <input type="submit" value="Place Order" />
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2024 ZORO LOGISTICS</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png.jpg" alt="ZORO LOGISTICS Logo" class="logo" />
+      <h1>ZORO LOGISTICS</h1>
+    </header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="shipment.html">Shipment</a>
+      <a href="myshipment.php">MyShipment</a>
+      <a href="myorders.php">MyOrders</a>
+      <a href="liveorder.php">Live Orders</a>
+      <a href="carriers.php">Available shipments</a>
+      <a href="profile.php">Profile</a>
+    </nav>
+    <div class="container">
+      <h1>WHY WE ?</h1>
+      <p>
+        IT’S FREE TO JOIN AND GET START,BID FOR ORDERS ACCEPT OFFERS AND WIN
+        BUSINESS, SECURE PAYMENTS AND EASY TO USE AND WE ARE OPEN AND
+        TRANSPARENT ABOUT OUR FEES
+      </p>
+      <h1>You want to join us as a</h1>
+      <div class="button-container">
+        <button onclick="redirectToSignupUser()">Signup as User</button>
+        <button onclick="redirectToSignupTransporter()">
+          Signup as Transporter
+        </button>
+      </div>
+      <p>
+        already have an account <a href="login.html"><button>Login</button></a>
+      </p>
+    </div>
+
+    <script>
+      function redirectToSignupUser() {
+        window.location.href = "signup_user.html";
+      }
+
+      function redirectToSignupTransporter() {
+        window.location.href = "signup_transporter.html";
+      }
+    </script>
+    <footer>
+      <p>&copy; 2024 ZORO LOGISTICS</p>
+    </footer>
+  </body>
+</html>

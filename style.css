@@ -1,0 +1,291 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to right, #ff481f, #102e4a);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 100px;
+  margin: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.content img {
+  margin-left: 50%;
+  max-width: 700px;
+  height: 500px;
+}
+
+nav {
+  background-color: #102e4a;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+section {
+  padding: 300px 0;
+  text-align: right;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.btn1 {
+  width: 30%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: #ff481f;
+  color: #102e4a;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn1:hover {
+  background: #fff;
+  color: #058283;
+}
+
+p {
+  line-height: 1.6;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+.order-list {
+  list-style: none;
+  padding: 0;
+}
+.order-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ff481f;
+}
+.bid-form {
+  margin-top: 20px;
+}
+.bid-form input[type="number"] {
+  width: 100px;
+  padding: 5px;
+  margin-right: 10px;
+}
+.bid-form input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #102e4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bid-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+.profile-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.profile-info label {
+  font-weight: bold;
+}
+.logout-button {
+  margin-top: 20px;
+}
+.logout-button a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.logout-button a:hover {
+  background-color: #ddd;
+}
+
+form {
+  text-align: left;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #102e4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #555;
+}
+.google-login {
+  text-align: center;
+  margin-top: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+form {
+  text-align: left;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #102e4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #555;
+}
+.login-button {
+  margin-top: 20px;
+}
+.login-button a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #ff481f;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-button a:hover {
+  background-color: #ddd;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.google-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.button-container button {
+  padding: 10px 20px;
+  background-color: #102e4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #555;
+}
+
+.track-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #555;
+}
+.tracking-result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+.profile-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.profile-info label {
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+}
+
+.half-width {
+  width: 45%;
+}

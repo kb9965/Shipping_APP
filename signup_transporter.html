@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transporter Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="img\logo.jpg" alt="ZORO LOGISTICS Logo" class="logo" />
+      <h1>ZORO LOGISTICS</h1>
+    </header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="shipment.html">Shipment</a>
+      <a href="myshipment.php">MyShipment</a>
+      <a href="myorders.php">MyOrders</a>
+      <a href="carriers.php">Available shipments</a>
+      <a href="profile.php">Profile</a>
+    </nav>
+    <div class="container">
+      <h2>Transporter Signup</h2>
+      <form action="signup_transporter.php">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="DLNumber">Driver's License Number:</label>
+        <input type="text" id="DLNumber" name="DLNumber" required />
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required />
+
+        <label for="vehicleNumber">Vehicle Registration Number:</label>
+        <input type="text" id="vehicleNumber" name="vehicleNumber" required />
+
+        <label for="vehicleModel">Vehicle Model:</label>
+        <input type="text" id="vehicleModel" name="vehicleModel" required />
+
+  
+
+        <input type="submit" value="Sign Up" />
+      </form>
+      <div class="login-button">
+        <a href="login.html">Already have an account? Login</a>
+      </div>
+    </div>
+    <script>
+       // Wait for the DOM to be fully loaded
+       document.addEventListener('DOMContentLoaded', function() {
+        // Get the form element
+        const form = document.querySelector('form');
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+
+          // Create a new FormData object to collect form data
+          const formData = new FormData(form);
+
+          // Send a POST request to the appropriate server-side route based on the form's action
+          const endpoint = form.getAttribute('action');
+          fetch(endpoint, {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => {
+            if (response.ok) {
+              // If the response is successful, redirect the user to a success page
+              window.location.href = 'login.html';
+            } else {
+              // If there's an error, display an alert message
+              alert('An error occurred while submitting the form. Please try again later.');
+            }
+          })
+          .catch(error => {
+            // If there's a network error, display an alert message
+            console.error('Error:', error);
+            alert('A network error occurred while submitting the form. Please check your internet connection and try again.');
+          });
+        });
+      })
+    </script>
+    <footer>
+      <p>&copy; 2024 ZORO LOGISTICS</p>
+    </footer>
+  </body>
+</html>

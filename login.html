@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png.jpg" alt="ZORO LOGISTICS Logo" class="logo" />
+      <h1>ZORO LOGISTICS</h1>
+    </header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="shipment.html">Shipment</a>
+      <a href="myshipment.php">MyShipment</a>
+      <a href="myorders.php">MyOrders</a>
+      <a href="liveorder.php">Live Orders</a>
+      <a href="carriers.php">Available shipments</a>
+      <a href="profile.php">Profile</a>
+    </nav>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="login.php">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Login" />
+      </form>
+      
+      <p>Don't have an account? <a href="signupseparate.html">Create one</a></p>
+    </div>
+    <script>
+      // Wait for the DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', function() {
+          // Get the form element
+          const form = document.querySelector('form');
+  
+          // Add a submit event listener to the form
+          form.addEventListener('submit', function(event) {
+              // Prevent the default form submission behavior
+              event.preventDefault();
+  
+              // Create a new FormData object to collect form data
+              const formData = new FormData(form);
+  
+              // Send a POST request to the appropriate server-side route based on the form's action
+              const endpoint = form.getAttribute('action');
+              fetch(endpoint, {
+                      method: 'POST',
+                      body: formData
+                  })
+                  .then(response => {
+                      if (response.ok) {
+                          // If the response is successful, read the response text
+                          return response.text();
+                      } else {
+                          // If there's an error, reject the promise with an error message
+                          return Promise.reject('An error occurred while submitting the form. Please try again later.');
+                      }
+                  })
+                  .then(message => {
+                      // Display the message
+                      alert(message);
+  
+                      // Check if the message indicates successful login
+                      if (message.includes('sucessfully logged in')) {
+                          // If login is successful, redirect to index.html
+                          window.location.href = 'index.html';
+                      }
+                  })
+                  .catch(error => {
+                      // If there's a network error, display an alert message
+                      console.error('Error:', error);
+                      alert('A network error occurred while submitting the form. Please check your internet connection and try again.');
+                  });
+          });
+      });
+  </script>
+  
+  
+    <footer>
+      <p>&copy; 2024 ZORO LOGISTICS</p>
+    </footer>
+  </body>
+</html>
